@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Flappy Sudheer - Little Hearts Edition</title>
+  <link rel="stylesheet" href="style.css?v=3">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Press+Start+2P&family=Rubik:wght@700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- Phone Frame / Game Container -->
+    <div class="game-container" id="gameContainer">
+      <canvas id="gameCanvas" width="450" height="800"></canvas>
+
+      <!-- UI Header with Mute & Fullscreen -->
+      <div class="top-bar">
+        <button id="muteBtn" class="icon-btn" title="Toggle Sound (M)">
+          <span id="muteIcon">🔊</span>
+        </button>
+        <div class="top-title">FLAPPY SUDHEER</div>
+        <button id="fullscreenBtn" class="icon-btn" title="Toggle Fullscreen">
+          ⛶
+        </button>
+      </div>
+
+      <!-- Live In-Game Score -->
+      <div id="liveScore" class="live-score">0</div>
+
+      <!-- Start / Ready Screen Overlay -->
+      <div id="startScreen" class="overlay active">
+        <div class="start-box">
+          <div class="reel-badge">📱 REEL EDITION</div>
+          <h1 class="game-title">FLAPPY<br><span class="highlight">SUDHEER</span></h1>
+
+          <div class="character-preview">
+            <img src="assests/sudheer.png" alt="Sudheer" id="previewSudheer" class="bobbing">
+          </div>
+
+          <div class="instructions">
+            <div class="key-hint">
+              <span class="key">SPACE</span> or <span class="key">TAP</span> to Fly
+            </div>
+          </div>
+
+          <button id="startBtn" class="primary-btn pulse">START FLYING 🚀</button>
+        </div>
+      </div>
+
+      <!-- Game Over Overlay -->
+      <div id="gameOverScreen" class="overlay">
+        <div class="gameover-box">
+          <div class="gameover-header">
+            <h2 class="gameover-title">GAME OVER</h2>
+            <div class="crying-emoji">😭💔</div>
+          </div>
+          
+          <div class="score-card">
+            <div class="score-row">
+              <span class="label">SCORE</span>
+              <span class="val" id="finalScore">0</span>
+            </div>
+            <div class="score-row">
+              <span class="label">BEST SCORE</span>
+              <span class="val highlight" id="bestScore">0</span>
+            </div>
+            <div class="medal-badge" id="medalBadge">
+              <span id="medalEmoji">📚</span>
+              <span id="medalText">Backlog Cleared!</span>
+            </div>
+          </div>
+
+          <div class="quote-box" id="quoteBox">
+            "Better luck next round! Try again! 🚀"
+          </div>
+
+          <button id="restartBtn" class="primary-btn pulse">PLAY AGAIN 🔄</button>
+          <div class="restart-hint">Press <strong>SPACE</strong> or <strong>TAP</strong> to restart</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Audio Elements -->
+  <!-- Background Music -->
+  <audio id="bgm" loop preload="auto">
+    <source src="assests/bgm.mp3" type="audio/mpeg">
+    <source src="assets/bgm.mp3" type="audio/mpeg">
+    <source src="assests/Little%20Hearts%20-%20Katyayani%20Nanu%20Love%20Cheyavey%20Full%20Song%20Moulitalks,%20Shivani%20Nagaram%204K-%5BAudioTrimmer.com%5D%20(1).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Game Over Audio -->
+  <audio id="gameOverAudio" preload="auto">
+    <source src="assests/gameover.mp3" type="audio/mpeg">
+    <source src="assets/gameover.mp3" type="audio/mpeg">
+  </audio>
+
+  <script src="game.js?v=3"></script>
+</body>
+</html>

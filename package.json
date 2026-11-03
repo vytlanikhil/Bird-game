@@ -4,7 +4,8 @@
   "description": "Flappy Sudheer - Little Hearts Edition Web Game",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "node build.js"
   },
   "keywords": [
     "flappy-bird",
