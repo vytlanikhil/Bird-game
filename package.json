@@ -1,0 +1,19 @@
+{
+  "name": "flappy-sudheer",
+  "version": "1.0.0",
+  "description": "Flappy Sudheer - Little Hearts Edition Web Game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "node -e \"console.log('Build completed successfully for Vercel deployment.')\""
+  },
+  "keywords": [
+    "flappy-bird",
+    "little-hearts",
+    "sudheer",
+    "game",
+    "vercel"
+  ],
+  "author": "",
+  "license": "ISC"
+}
